@@ -101,9 +101,9 @@
 				height: auto;
 				margin: auto;
 			}
-			.p {
+			.copy {
 				text-align: center;
-				font-size: 40px;
+				font-size: 30px;
 				font-weight: 900;
 			}
 		</style>
@@ -120,7 +120,20 @@
 				</div>
 			</div>
 		</div>
-		<p class="p">打开支付宝扫码领红包</p>
-		<img src="1607420444700.jpg" >
+		<div class="copy">
+			<p class="p">打开支付宝扫码领红包</p>
+			<p>点击二维码复制内容，到支付宝搜索</p>
+			<span class="text">695193905</span>
+			<img class="img" src="1607420444700.jpg" >
+		</div>
+		<script type="text/javascript">
+			window.onload = function(){
+				document.querySelector(".img").onclick = function(){
+					var a = document.querySelector(".text");
+					window.getSelection().selectAllChildren(a);
+					document.execCommand ("copy");
+				}
+			}
+		</script>
 	</body>
 </html>
